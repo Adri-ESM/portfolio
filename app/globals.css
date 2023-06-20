@@ -2,40 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   /*colors*/
-  --primary: #2d7c8c;
-  --primary-light: #1f7774;
   --black: #170202;
   --white: #f3eceb;
-  --orange: #d34333;
-  --yellow: #f1c40f;
+  --orange: #ff8553;
+  --yellow: #F9B91E;
   --yellow-light: #f9e79f;
-  --green: #347850;
-  /*fonts*/
-  --font-primary: "Roboto", sans-serif;
-  --font-secondary: "Roboto Slab", serif;
-  --font-tertiary: "Roboto Mono", monospace;
-  --font-size: 1rem;
-  --font-size-small: 0.8rem;
-  --font-size-large: 1.2rem;
-  --font-size-xlarge: 1.5rem;
-  --font-size-xxlarge: 2rem;
-  --font-size-xxxlarge: 3rem;
-  --font-weight-ppal: 600;
-  --font-weight-secondary: 700;
-  --font-weight-tertiary: 800;
+  --rose-dark: #DB519A;
+  --rose-light: #eb8787;
+  --purple: #D336BC;
+  --brown-dark: #9a5806;
+  --grey-light: #D8DAD8;
+  --dark-green: #238781;
+  --light-green: #349B7C;
+
+  /*fontsize*/
+  --primary: "Roboto", sans-serif;
+  --secondary: "Roboto Slab", serif;
+  --terciary: "Roboto Mono", monospace;
+  --xsmall: 0.8rem;
+  --small: 1rem;
+  --medium: 1.2rem;
+  --xmedium: 1.5rem;
+  --large: 2rem;
+  --xlarge: 3rem;
+  --weight-ppal: 600;
+  --weight-secondary: 700;
+  --weight-tertiary: 800;
 
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 196, 227, 215;
+    --background-end-rgb: 196, 227, 215;
   }
 }
 

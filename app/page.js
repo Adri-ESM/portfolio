@@ -1,3 +1,5 @@
+import styles from "./home/Home.modules.css";
+
 export default function HomePage() {
-  return <div>This is the Home</div>;
+  return <div className={styles.home}></div>;
 }

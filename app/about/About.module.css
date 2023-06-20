@@ -1,0 +1,89 @@
+.aboutContainer{
+    text-align: center;
+    margin: 0 auto;
+
+}
+.titles, .aboutText {
+    margin: 0 auto;
+    width: 80%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px #000;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--medium);
+    color: #fff;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.00938em;
+    font-style: normal;
+    font-size: 1rem;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+    opacity: 0.8;
+}
+.titles{
+    background-color: #333;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.titles h1{
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.00938em;
+    font-style: normal;
+    font-size: 1.25rem;
+    margin-bottom: 0.35em;
+    line-height: 1.6;
+}
+.aboutText{
+    background-color: var(--dark-green);
+    margin-top: 50px;
+    /*margin-bottom: 200px; */
+}
+
+.titles:hover, .aboutText:hover, .aboutImage:hover {
+    transform: scale(1.1);
+}
+.aboutImage {
+    width: 250px;
+    height: 240px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #2a9d8f;
+    margin: 0 auto;
+    background-color: var(--light-grey);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+      
+.aboutImage Image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    margin: 0;
+}
+.buttonContainer{
+    position: relative;
+    color: black;
+}
+.buttonForm{
+    margin-top: 50px;
+    margin-bottom: 200px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px #000;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--medium);
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.00938em;
+    font-style: normal;
+    opacity: 0.8;
+} 

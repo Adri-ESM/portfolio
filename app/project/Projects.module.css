@@ -1,0 +1,93 @@
+
+  .projectsContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin-top: 50px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .projectContainer1 {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin-top: 50px;
+    margin-bottom: 30%;
+    transition: transform 0.3s ease-in-out;
+  }
+  .title{
+    font-size: var(--large);
+    font-weight: 600;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  .projectDescription {
+    display: none;
+    position: absolute;
+    background-color: var(--dark-green);
+    width: 52%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    margin-left: 24%;
+    top: 0;
+    opacity: .85;
+  }
+  
+  .projectTitle {
+    font-size: var(--medium);
+    font-weight: 800;
+    color: var(--white);
+    margin-top: 30px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .projectImage {
+    display: grid;
+    max-width: 500px;
+    max-height: 500px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px #000;
+    border-radius: 10px;
+    margin-inline: auto;
+    image-rendering: pixelated;
+    cursor: pointer;
+  }
+
+  .showInfo {
+    opacity: 1;
+    visibility: visible;
+  }
+  .projectImageContainer {
+    position: relative;
+  }
+  .projectImageContainer:hover .projectDescription {
+    display: block;
+    cursor: pointer;
+  }
+  .linksToolsM, .linksAFood{
+    display: block;
+    margin-top: 150px;
+    justify-content: space-between;
+    align-items: center;
+  background-color: var(--black);
+  padding: 10px;
+  border-radius: 10px;
+
+  }
+  .projectLinkWeb:hover, .projectLinkRepo:hover{
+    color: var(--orange);
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 2px solid var(--orange);
+    transition: border-bottom 0.3s ease-in-out;
+  }
+.projectLogo{
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  image-rendering: pixelated;
+}
+.projectContainer:hover, .projectContainer1:hover {
+  transform: scale(1.1);
+}
