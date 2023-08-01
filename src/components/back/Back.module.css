@@ -1,0 +1,15 @@
+.formBack{
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px #000;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--medium);
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.00938em;
+    font-style: normal;
+    opacity: 0.8;
+}

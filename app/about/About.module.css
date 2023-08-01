@@ -42,8 +42,9 @@
     /*margin-bottom: 200px; */
 }
 
-.titles:hover, .aboutText:hover, .aboutImage:hover {
+.titles:hover, .aboutText:hover {
     transform: scale(1.1);
+    width: 70%;
 }
 .aboutImage {
     width: 250px;

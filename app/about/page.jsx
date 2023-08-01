@@ -2,7 +2,6 @@ import styles from "./About.module.css";
 import Image from "next/image";
 import Adri from "../../public/image/adri3.png";
 import Link from "next/link";
-import Form from "../form/page";
 
 export default function AboutPage() {
   return (
@@ -25,10 +24,11 @@ export default function AboutPage() {
           Soy una apasionada de la programación. Mi objetivo es crear
           experiencias digitales impactantes y funcionales que conecten con las
           personas. Me encanta aprender constantemente y mantenerme al tanto de
-          las últimas tendencias en tecnología. Me encanta trabajar en equipo y
-          colaborar estrechamente para asegurarme de que los objetivos y
-          visiones se vean reflejados en cada proyecto que emprendo. Siempre
-          estoy abierta a nuevos desafíos y oportunidades de crecimiento. <br />
+          las últimas tendencias en tecnología. El trabajo en equipo y la
+          colaboración estrecha, es fundamental para asegurarme de que los
+          objetivos y visiones se vean reflejados en cada proyecto que emprendo.
+          Siempre estoy abierta a nuevos desafíos y oportunidades de
+          crecimiento. <br />
           No dudes en ponerte en contacto conmigo si tienes alguna pregunta o si
           estás interesado en que yo colabore en un proyecto emocionante. <br />
           ¡Estoy ansiosa por formar parte de tu éxito en el mundo digital!
@@ -37,7 +37,6 @@ export default function AboutPage() {
       <Link href="/form" className={styles.button}>
         <button className={styles.buttonForm}>Coversemos</button>
       </Link>
-      <pageForm />
     </div>
   );
 }

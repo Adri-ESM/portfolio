@@ -36,7 +36,7 @@
   }
   
   .iconList li {
-    margin-right: 10px;
+    margin-right: 5px;
 
   }
   
@@ -45,7 +45,8 @@
     font-size: 30px;
     transition: all 0.3s ease;
     margin-top: 50%;
-
+    display: grid;
+    
   }
  
   .iconFolder{

@@ -1,6 +1,29 @@
 "use client";
 import { useState } from "react";
 import styles from "./Form.module.css";
+import Back from "@/src/components/back/Back";
+
+async function sendEmail(formData) {
+  try {
+    const response = await fetch("/api/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      console.log("El correo electrónico se envió correctamente");
+      // Puedes mostrar un mensaje de éxito o redirigir a una página de confirmación
+    } else {
+      console.error("Ocurrió un error al enviar el correo electrónico");
+      // Puedes mostrar un mensaje de error o manejar el error de otra manera
+    }
+  } catch (error) {
+    console.error("Error al enviar el correo electrónico:", error);
+  }
+}
 
 function Form() {
   const [formData, setFormData] = useState({
@@ -14,24 +37,9 @@ function Form() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    const response = await fetch("/api/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-
-    if (response.ok) {
-      // El correo electrónico se envió correctamente
-      // Puedes mostrar un mensaje de éxito o redirigir a una página de confirmación
-    } else {
-      // Ocurrió un error al enviar el correo electrónico
-      // Puedes mostrar un mensaje de error o manejar el error de otra manera
-    }
+    sendEmail(formData);
   };
 
   return (
@@ -43,6 +51,7 @@ function Form() {
         name="name"
         value={formData.name}
         onChange={handleChange}
+        className={styles.formControl}
         required
       />
 
@@ -53,6 +62,7 @@ function Form() {
         name="email"
         value={formData.email}
         onChange={handleChange}
+        className={styles.formControl}
         required
       />
 
@@ -63,6 +73,7 @@ function Form() {
         name="subject"
         value={formData.subject}
         onChange={handleChange}
+        className={styles.formControl}
         required
       />
 
@@ -72,10 +83,15 @@ function Form() {
         name="message"
         value={formData.message}
         onChange={handleChange}
+        className={styles.formMsg}
         required
       ></textarea>
-
-      <button type="submit">Enviar</button>
+      <div className={styles.formButton}>
+        <Back />
+        <button className={styles.formSend} type="submit">
+          Enviar
+        </button>
+      </div>
     </form>
   );
 }
