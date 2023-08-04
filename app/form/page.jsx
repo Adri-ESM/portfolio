@@ -15,17 +15,19 @@ async function sendEmail(formData) {
 
     if (response.ok) {
       console.log("El correo electrónico se envió correctamente");
-      // Puedes mostrar un mensaje de éxito o redirigir a una página de confirmación
+      return true;
     } else {
       console.error("Ocurrió un error al enviar el correo electrónico");
-      // Puedes mostrar un mensaje de error o manejar el error de otra manera
+      return false;
     }
   } catch (error) {
     console.error("Error al enviar el correo electrónico:", error);
+    return false;
   }
 }
 
 function Form() {
+  const [notification, setNotification] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -37,9 +39,26 @@ function Form() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    sendEmail(formData);
+    try {
+      console.log("Formulario enviado:", formData);
+      const success = await sendEmail(formData);
+      if (success) {
+        setNotification("El correo electrónico se envió correctamente");
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setNotification("Ocurrió un error al enviar el correo electrónico");
+      }
+    } catch (error) {
+      console.error("Error al enviar el formulario:", error);
+      setNotification("Ocurrió un error al enviar el correo electrónico");
+    }
   };
 
   return (
@@ -92,6 +111,9 @@ function Form() {
           Enviar
         </button>
       </div>
+      {notification && (
+        <div className={styles.notification}>{notification}</div>
+      )}
     </form>
   );
 }

@@ -6,15 +6,6 @@ import Link from "next/link";
 export default function AboutPage() {
   return (
     <div className={styles.aboutContainer}>
-      <div className={styles.titles}>
-        <div className={styles.aboutTitle}>
-          <h1>Hola, Soy Adri</h1>
-        </div>
-        <div className={styles.aboutSubTitle}>
-          <h2>Desarrolladora Web</h2>
-          <h2>¡Un gusto conocerte!</h2>
-        </div>
-      </div>
       <div className={styles.aboutImage}>
         <Image src={Adri} alt="Adri Foto" width="250" height="240" />
       </div>

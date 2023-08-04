@@ -5,7 +5,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-      <footer className={styles.footerContainer}>
+      <footer className={` ${styles.footerContainer}`}>
         <ul className={styles.link}>
           <div>
             <Link href="/">

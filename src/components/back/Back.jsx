@@ -1,9 +1,16 @@
-import React from "react";
+"use client";
+import { useRouter } from "next/navigation";
 import styles from "./Back.module.css";
 
 export default function Back() {
+  const router = useRouter();
+
+  function handleBack() {
+    router.back();
+  }
+
   return (
-    <div className={styles.formBack}>
+    <div onClick={handleBack} className={styles.formBack}>
       <button>Volver</button>
     </div>
   );
