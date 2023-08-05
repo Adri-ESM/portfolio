@@ -1,149 +1,263 @@
-/* .header { */
-    /* padding: 20px 40px; */
-    /* background-image: url("../../../public/image/header2.png"); */
-    /* background: rgb(255,133,83);
-    background: linear-gradient(90deg, rgba(255,133,83,1) 0%, rgba(235,135,135,1) 59%, rgba(154,88,6,1) 99%); */
-    /* width: 100%;
-    z-index: 1; */
-  /* } */
-  
-  .bannerImage {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  
+.bannerImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.iconNav {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  z-index: 2; 
+}
+.iconList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-left: 100%;
+  margin-top: 40%;
+}
+.iconList li {
+  margin-right: 5px;
+}
+.iconLink {
+  color: green;
+  font-size: 30px;
+  transition: all 0.3s ease;
+  margin-top: 50%;
+  display: grid;
+}
+.iconFolder{
+  margin-left: 5px;
+}
+.iconHome, .iconUser {
+  color: var(--orange);
+  font-size: 30px;
+  transition: all 0.3s ease;
+  margin-top: 50%;
+}
+.iconFolder {
+  color: var(--orange);
+  font-size: 30px;
+  transition: all 0.3s ease;
+  margin-top: 42%;
+}
+.iconHome:hover, .iconUser:hover, .iconFolder:hover{
+  color: var(--green);
+}
+
+/* ---------- TEXTO DEBAJO DE ICONOS ---------- */
+.iconHomeText, .iconUserText, .iconFolderText{
+  position: absolute;
+  /* left: 50%; */
+  transform: translateX(-23%);
+  color: var(--green);
+  padding: 0 5px;
+  font-size: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  font-weight: 600;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.iconLink:hover .iconHomeText, .iconLink:hover .iconUserText, .iconLink:hover .iconFolderText{
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ---------- RESPONSIVE ---------- */ 
+@media (min-width: 450px) and (max-width: 550px) {
   .iconNav {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2; /* Asegúrate de que el z-index sea mayor que el de la imagen */
-  
-
+    left: 65%;
+    transform: translate(-50%, -40%);
+   
   }
-  
-  .iconList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    margin-left: 100%;
-    margin-top: 40%;
-
-  }
-  
-  .iconList li {
-    margin-right: 5px;
-
-  }
-  
   .iconLink {
-    color: green;
-    font-size: 30px;
-    transition: all 0.3s ease;
-    margin-top: 50%;
-    display: grid;
-    
-  }
- 
-  .iconFolder{
-    margin-left: 5px;
-  }
-  .iconHome, .iconUser {
-    color: var(--orange);
-    font-size: 30px;
-    transition: all 0.3s ease;
+    font-size: 40px;
     margin-top: 50%;
   }
-  .iconFolder {
-    color: var(--orange);
-    font-size: 30px;
-    transition: all 0.3s ease;
-    margin-top: 42%;
+}
+@media (min-width: 551px) and (max-width: 650px) {
+  .iconNav {
+    left: 70%;
+    transform: translate(-50%, -40%);
   }
-  .iconHome:hover, .iconUser:hover, .iconFolder:hover{
-    color: var(--green);
+  .iconLink {
+    font-size: 40px;
+    margin-top: 120%;
   }
-
-  /* ---------- TEXTO DEBAJO DE ICONOS ---------- */
-  .iconHomeText, .iconUserText, .iconFolderText{
-    position: absolute;
-    /* left: 50%; */
-    transform: translateX(-23%);
-    color: var(--green);
-    padding: 0 5px;
-    font-size: 10px;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    font-weight: 600;
-    transition: opacity 0.3s, visibility 0.3s;
+}
+@media (min-width: 651px) and (max-width: 850px) {
+  .iconNav {
+    left: 60%;
+    transform: translate(-40%, -40%);
+   
   }
-  
-  .iconLink:hover .iconHomeText, .iconLink:hover .iconUserText, .iconLink:hover .iconFolderText{
-    opacity: 1;
-    visibility: visible;
+  .iconLink {
+    font-size: 40px;
+    margin-top: 120%;
   }
-
-  /* ---------- BANNER ---------- */
-  /* .banner {
-    display: flex;
-    height:12vh;
-    
+  .iconHome, .iconUser, .iconFolder {
+    font-size: 40px;
   }
-  
-  .bannerTitle {
-    background-color: var(--white);
-    color: var(--black);
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+} 
+@media (min-width: 851px) and (max-width: 950px) {
+  .iconNav {
+    left: 60%;
+    transform: translate(-40%, -40%);
   }
-  
-  .bannerImage {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
- 
-  } */
- 
-  /* .banner {
-    display: flex;
-    height: 12vh;
+  .iconLink {
+    font-size: 40px;
+    margin-top: 120%;
+  } 
+  .iconHome, .iconUser, .iconFolder {
+    font-size: 50px;
   }
-  
-  .bannerTitle {
-    background-color: var(--white);
-    color: var(--black);
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+} 
+@media (min-width: 951px) and (max-width: 1600px) {
+  .header{
+    background-color: #fff;
   }
-  
-  .bannerImage {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-  
   .image {
-    width: 100%;
+    width: 50%;
+    height: 300px;
+  }
+  .bannerImage {
     height: 100%;
-    object-fit: cover;
-  } */
+  }
+  .iconNav {
+    left: 50%;
+    transform: translate(-65%, -65%);
+  }
+  .iconLink {
+    font-size: 40px;
+    margin-top: 0;
+  } 
+  .iconHome, .iconUser {
+    font-size: 50px;
+    margin-left: 50px;
+  } 
+  .iconFolder{
+    font-size: 50px;
+    margin-left: 70px;
+  }
+  .iconHomeText{
+    left: 115%; 
+    font-size: 15px;
+  }
+  .iconUserText{
+    left: 145%; 
+    font-size: 15px;
+  }
+  .iconFolderText{
+    left: 180%; 
+    font-size: 15px;
+  }
+} 
+@media (min-width: 1601px) and (max-width: 2000px) {
+  .header{
+    background-color: #fff;
+  }
+  .image {
+    width: 50%;
+    height: 320px;
+  }
+
+  .iconNav {
+    left: 60%;
+    transform: translate(-65%, -65%);
+  }
+
+  .iconHome, .iconUser {
+    font-size: 70px;
+    margin-left: 50px;
+  } 
+  .iconFolder{
+    font-size: 70px;
+    margin-left: 70px;
+  }
+  .iconHomeText{
+    left: 115%; 
+    font-size: 20px;
+  }
+  .iconUserText{
+    left: 145%; 
+    font-size: 20px;
+  }
+  .iconFolderText{
+    left: 180%; 
+    font-size: 20px;
+  }
+} 
+@media (min-width: 2001px) and (max-width: 2600px) {
+  .header{
+    background-color: #fff;
+  }
+  .image {
+    width: 50%;
+    height: 360px;
+  }
+  .iconNav {
+    left: 65%;
+    transform: translate(-65%, -65%);
+  }
+
+  .iconHome, .iconUser {
+    font-size: 80px;
+    margin-left: 60px;
+  } 
+  .iconFolder{
+    font-size: 80px;
+    margin-left: 80px;
+  }
+  .iconHomeText{
+    left: 115%; 
+    font-size: 25px;
+  }
+  .iconUserText{
+    left: 145%; 
+    font-size: 25px;
+  }
+  .iconFolderText{
+    left: 180%; 
+    font-size: 25px;
+  }
+} 
+@media (min-width: 2601px) and (max-width: 3000px) {
+  .header{
+    background-color: #fff;
+  }
+  .image {
+    width: 50%;
+    height: 420px;
+  }
+  .iconNav {
+    left: 70%;
+    transform: translate(-65%, -65%);
+  }
+
+  .iconHome, .iconUser {
+    font-size: 90px;
+    margin-left: 70px;
+  } 
+  .iconFolder{
+    font-size: 90px;
+    margin-left: 90px;
+  }
+  .iconHomeText{
+    left: 115%; 
+    font-size: 30px;
+  }
+  .iconUserText{
+    left: 145%; 
+    font-size:30px;
+  }
+  .iconFolderText{
+    left: 180%; 
+    font-size:30px;
+  }
+} 

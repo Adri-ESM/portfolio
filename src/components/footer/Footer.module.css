@@ -57,3 +57,56 @@
   margin-left: 20px;
 }
 
+/*RESPONSIVE*/
+@media (min-width: 951px) and (max-width: 1600px) {
+ .footerContainer{
+    padding: 30px 40px;
+ }
+ .logo, .contact{
+  margin-left: 20px;
+  font-size: 30px;
+ }
+ .linkedin, .github{
+margin-left: 30px;
+width: 50px;
+ }
+}
+@media (min-width: 1601px) and (max-width: 2000px) {
+  .footerContainer{
+    padding: 30px 40px;
+ }
+ .logo, .contact{
+  margin-left: 30px;
+  font-size: 40px;
+ }
+ .linkedin, .github{
+margin-left: 30px;
+width: 50px;
+ }
+} 
+@media (min-width: 2001px) and (max-width: 2600px) {
+   .footerContainer{
+    padding: 30px 40px;
+ }
+ .logo, .contact{
+  margin-left: 40px;
+  font-size: 30px;
+ }
+ .linkedin, .github{
+margin-left: 30px;
+width: 50px;
+ }
+} 
+@media (min-width: 2601px) and (max-width: 3000px) {
+ .footerContainer{
+    padding: 30px 40px;
+ }
+ .logo, .contact{
+  margin-left: 20px;
+  font-size: 30px;
+ }
+ .linkedin, .github{
+margin-left: 30px;
+width: 50px;
+ }
+} 

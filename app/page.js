@@ -7,7 +7,7 @@ import Scrum from "../public/image/team-lead.png";
 
 export default function Home() {
   return (
-    <div className="flex flex-col bg-gray-200 mt-5 justify-center mx-auto max-w-screen-xl p-5 my-24">
+    <div className="flex flex-col bg-gray-200 mt-5 justify-center mx-auto max-w-screen-xl p-5 my-40">
       <div className="titles bg-gray-300 m-10 p-5 border border-gray-400 shadow-md rounded-lg text-center">
         <div className="homeTitle">
           <h1 className="text-xl font-semibold">Hola, Soy Adri</h1>
@@ -17,7 +17,7 @@ export default function Home() {
           <h2 className="text-lg font-medium">¡Un gusto conocerte!</h2>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
         <section className="homeSection bg-white m-10 p-5 border border-gray-200 shadow-md rounded-lg text-center">
           <Image
             src={Code}
@@ -27,12 +27,14 @@ export default function Home() {
             className="rounded-full border border-orange-400 shadow-md inline-flex"
           ></Image>
           <div className="homeSectionTitle">
-            <p className="text-lg mt-5 mb-10 font-medium">
+            <p className="text-base mt-5 mb-10 font-medium">
               Me gusta codificar cosas desde cero y disfruto dando vida a las
               ideas en el navegador.
             </p>
             <div className="homeSectionText">
-              <h2 className="text-lg font-medium">Desarrollo Frontend:</h2>
+              <h2 className="text-base mt-5 mb-10 font-medium">
+                Desarrollo Frontend:
+              </h2>
               <p>
                 HTML, CSS, JavaScript <br /> React <br /> Next.js
                 <br /> Typescript <br /> Tailwind <br /> Bootstrap <br /> GitHub
@@ -50,22 +52,26 @@ export default function Home() {
             className="rounded-full border border-orange-400 shadow-md inline-flex"
           ></Image>
           <div className="homeSectionTitle">
-            <p className="text-lg mt-5 mb-10 font-medium">
+            <p className="text-base mt-5 mb-10 font-medium">
               Creando la magia detrás de cada funcionalidad, llevando tus ideas
               al servidor.
             </p>
             <div className="homeSectionText">
-              <h2 className="text-lg mt-5 font-medium ">Desarrollo Backend:</h2>
+              <h2 className="text-base mt-5 mb-10 font-medium">
+                Desarrollo Backend:
+              </h2>
               <p>
                 Node <br /> Express
               </p>
             </div>
             <div className="homeSectionText">
-              <h2 className="text-lg mt-5 font-medium ">Desarrollo móvil:</h2>
+              <h2 className="text-base mt-5 mb-10 font-medium">
+                Desarrollo móvil:
+              </h2>
               <p>React Native</p>
             </div>
             <div className="homeSectionText">
-              <h2 className="text-lg mt-5 font-medium ">
+              <h2 className="text-base mt-5 mb-10 font-medium">
                 Base de Datos y Almacenamiento:
               </h2>
               <p>
@@ -83,12 +89,12 @@ export default function Home() {
             className="rounded-full border border-orange-400 shadow-md inline-flex"
           ></Image>
           <div className="homeSectionTitle">
-            <p className="text-lg mt-5 mb-10 font-medium">
+            <p className="text-base mt-5 mb-10 font-medium">
               He tenido el honor de liderar y facilitar equipos de desarrollo en
               proyectos exitosos.
             </p>
             <div className="homeSectionText">
-              <h2 className="text-lg font-medium">Team Leader:</h2>
+              <h2 className="text-base mt-5 mb-10 font-medium">Team Leader:</h2>
               <ul className="list-disc list-inside list-none text-left">
                 <li>
                   <FaCheck className="inline-block mr-2 text-green-500 " />
