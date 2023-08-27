@@ -105,7 +105,7 @@ const ProjectsPage = () => {
                   borderRadius: "50%",
                 }}
               />
-              <h2 className={styles.projectTitle}>Adri's Food</h2>
+              <h2 className={styles.projectTitle}>Adri&apos;s Food</h2>
               {/* </Link> */}
               <div className={styles.linksAFood}>
                 <Link
