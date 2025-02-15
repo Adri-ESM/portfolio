@@ -1,13 +1,13 @@
-import styles from "./About.module.css";
-import Image from "next/image";
-import Adri from "../../public/image/adri3.png";
-import Link from "next/link";
+import Image from 'next/image'
+import Adri from '../../public/adri.png'
+import Link from 'next/link'
+import styles from './about.module.css'
 
-export default function AboutPage() {
+export default function AboutPage () {
   return (
     <div className={styles.aboutContainer}>
       <div className={styles.aboutImage}>
-        <Image src={Adri} alt="Adri Foto" width="250" height="240" />
+        <Image src={Adri} alt='Adri Foto' width={250} height={240} />
       </div>
 
       <div className={styles.aboutText}>
@@ -25,9 +25,9 @@ export default function AboutPage() {
           ¡Estoy ansiosa por formar parte de tu éxito en el mundo digital!
         </p>
       </div>
-      <Link href="/form" className={styles.button}>
+      <Link href='/form' className={styles.button}>
         <button className={styles.buttonForm}>Coversemos</button>
       </Link>
     </div>
-  );
+  )
 }
