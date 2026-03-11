@@ -26,7 +26,7 @@ class About extends React.Component {
 								Soy Licenciada en Recursos Humanos, donde aprendí a gestionar equipos de trabajos y proyectos de forma dinámica.
 								Me apasiona aprender más tecnologías que puedan aumentar mis conocimientos y permitirme mejorar cada día.
 								Te invito a conocer algunos de mis Proyectos.</p>
-						
+								(TEST TEST TEST)
 							</div>
 
 							<div className='Habilities'>
