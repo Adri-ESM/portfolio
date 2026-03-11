@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  /*colors*/
+  --black: #170202;
+  --white: #f3eceb;
+  --orange: #ff8553;
+  --yellow: #F9B91E;
+  --yellow-light: #f9e79f;
+  --rose-dark: #DB519A;
+  --rose-light: #eb8787;
+  --purple: #D336BC;
+  --brown-dark: #9a5806;
+  --grey-light: #D8DAD8;
+  --dark-green: #238781;
+  --light-green: #349B7C;
+
+  /*fontsize*/
+  --primary: "Roboto", sans-serif;
+  --secondary: "Roboto Slab", serif;
+  --terciary: "Roboto Mono", monospace;
+  --xsmall: 0.8rem;
+  --small: 1rem;
+  --medium: 1.2rem;
+  --xmedium: 1.5rem;
+  --large: 2rem;
+  --xlarge: 3rem;
+  --weight-ppal: 600;
+  --weight-secondary: 700;
+  --weight-tertiary: 800;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-start-rgb: 196, 227, 215;
+    --background-end-rgb: 196, 227, 215;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
